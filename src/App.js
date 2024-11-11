@@ -1,25 +1,32 @@
-const Square = () => {
+
+const Square = ({ id }) => {
+  return (
+    <>
+      <button className="square">{id}</button>
+    </>
+  )
+}
+
+const Board = () => {
   return (
     <>
       <div className="board-row">
-        <button className="square">1</button>
-        <button className="square">2</button>
-        <button className="square">3</button>
+        <Square id="1" />
+        <Square id="2" />
+        <Square id="3" />
       </div>
-
       <div className="board-row">
-        <button className="square">4</button>
-        <button className="square">5</button>
-        <button className="square">6</button>
+        <Square id="4" />
+        <Square id="5" />
+        <Square id="6" />
       </div>
-
       <div className="board-row">
-        <button className="square">7</button>
-        <button className="square">8</button>
-        <button className="square">9</button>
+        <Square id="7" />
+        <Square id="8" />
+        <Square id="9" />
       </div>
     </>
   )
 }
 
-export default Square
+export default Board
