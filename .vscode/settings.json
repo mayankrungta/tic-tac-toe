@@ -10,7 +10,7 @@
   "editor.suggest.localityBonus": true,
   "editor.acceptSuggestionOnCommitCharacter": false,
   "[javascript]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "vscode.typescript-language-features",
     "editor.suggestSelection": "recentlyUsed",
     "editor.suggest.showKeywords": false
   },
