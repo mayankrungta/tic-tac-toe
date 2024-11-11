@@ -1,11 +1,15 @@
+import { useState } from 'react'
 
 const Square = ({ value }) => {
+  const [label, setLabel] = useState(value)
   const handleClick = (e) => {
     console.log(e.target.textContent)
+    setLabel(label => label === 'X' ? value : 'X')
   }
+
   return (
     <>
-      <button className="square" onClick={handleClick}>{value}</button>
+      <button className="square" onClick={handleClick}>{label}</button>
     </>
   )
 }
