@@ -1,8 +1,11 @@
 
-const Square = ({ id }) => {
+const Square = ({ value }) => {
+  const handleClick = (e) => {
+    console.log(e.target.textContent)
+  }
   return (
     <>
-      <button className="square">{id}</button>
+      <button className="square" onClick={handleClick}>{value}</button>
     </>
   )
 }
@@ -11,19 +14,19 @@ const Board = () => {
   return (
     <>
       <div className="board-row">
-        <Square id="1" />
-        <Square id="2" />
-        <Square id="3" />
+        <Square value="1" />
+        <Square value="2" />
+        <Square value="3" />
       </div>
       <div className="board-row">
-        <Square id="4" />
-        <Square id="5" />
-        <Square id="6" />
+        <Square value="4" />
+        <Square value="5" />
+        <Square value="6" />
       </div>
       <div className="board-row">
-        <Square id="7" />
-        <Square id="8" />
-        <Square id="9" />
+        <Square value="7" />
+        <Square value="8" />
+        <Square value="9" />
       </div>
     </>
   )
