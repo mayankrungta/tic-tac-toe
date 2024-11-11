@@ -1,8 +1,14 @@
+import { useState } from 'react'
 
-const Square = ({ id }) => {
+const Square = () => {
+  const [label, setLabel] = useState(null)
+  const handleClick = () => {
+    setLabel('X')
+  }
+
   return (
     <>
-      <button className="square">{id}</button>
+      <button className="square" onClick={handleClick}>{label}</button>
     </>
   )
 }
@@ -11,19 +17,19 @@ const Board = () => {
   return (
     <>
       <div className="board-row">
-        <Square id="1" />
-        <Square id="2" />
-        <Square id="3" />
+        <Square />
+        <Square />
+        <Square />
       </div>
       <div className="board-row">
-        <Square id="4" />
-        <Square id="5" />
-        <Square id="6" />
+        <Square />
+        <Square />
+        <Square />
       </div>
       <div className="board-row">
-        <Square id="7" />
-        <Square id="8" />
-        <Square id="9" />
+        <Square />
+        <Square />
+        <Square />
       </div>
     </>
   )
